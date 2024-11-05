@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.10" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.9.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.9.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FIAP.Grupo75.Contacts.Application\FIAP.Grupo75.Contacts.Application.csproj" />
+    <ProjectReference Include="..\FIAP.Grupo75.Contacts.Domain\FIAP.Grupo75.Contacts.Domain.csproj" />
+    <ProjectReference Include="..\FIAP.Grupo75.Contacts.Infra.Data\FIAP.Grupo75.Contacts.Infra.Data.csproj" />
+    <ProjectReference Include="..\FIAP.Grupo75.Contacts.Logging\FIAP.Grupo75.Contacts.Logging.csproj" />
+  </ItemGroup>
+
+</Project>
