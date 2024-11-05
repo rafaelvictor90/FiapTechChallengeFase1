@@ -24,6 +24,7 @@ namespace FIAP.Grupo75.Contacts.Application.Services
         public async Task<ContactGetDTO> Add(ContactDTO contactDTO)
         {
             var entityDdd = _dddRepository.GetByDddAsync(contactDTO.Ddd).Result;
+            if (entityDdd == null) return new ContactGetDTO();
             Contact newContact = new Contact(contactDTO.Name, contactDTO.PhoneNumber, contactDTO.Email, entityDdd.Id);
             await _contactRepository.CreateAsync(newContact);
             return ConvertContactToDTO(newContact);

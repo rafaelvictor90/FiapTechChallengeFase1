@@ -200,6 +200,9 @@ namespace FIAP.Grupo75.Contacts.API.Controllers
 
                 var contactGetDTO = await _contactService.Add(contactDTO);
 
+                if (contactGetDTO == null || contactGetDTO.Id == 0)
+                    return NotFound("DDD not found");
+
                 return Created("", contactGetDTO);
             }
             catch (Exception ex)
